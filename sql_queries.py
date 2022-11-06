@@ -74,7 +74,7 @@ VALUES(%s, %s, %s, %s, %s, %s, %s) ON CONFLICT DO NOTHING")
                      
 # FIND SONGS
 
-song_select = ("SELECT songs.id, artiss.artist_id FROM songs \
+song_select = ("SELECT songs.id, artists.artist_id FROM songs \
 JOIN artists ON songs.artist_id = artists.artist_id \
 WHERE songs.title = %s AND artists.name = %s")
 
